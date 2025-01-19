@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duppis Merger defend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-card">
+        <div class="controls-top">
+            <div class="stats">
+                <span id="money">Money: $100</span>
+                <span id="score">Score: 0</span>
+                <span id="wave">Wave: 1</span>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div id="player"></div>
+            <div id="bullets"></div>
+            <div id="zombies"></div>
+            <div class="tower-area" id="towerArea"></div>
+        </div>
+        
+        <div class="controls">
+            <button id="buyTower" class="button">Buy Tower ($50)</button>
+            <button id="gameControl" class="button">Start Game</button>
+        </div>
+    </div>
+
+    <div id="homeScreen" class="home-screen">
+        <div class="tutorial">
+            <h1>Duppi's Merger Defend</h1>
+            <div class="tutorial-list">
+                <li>Use 'A' and 'D' keys to move left and right</li>
+                <li>Press SPACE to shoot</li>
+                <li>Buy towers to defend your base</li>
+                <li>Earn money by defeating zombies</li>
+                <li>Merge towers of same level to upgrade</li>
+                <li>To merge, click two towers of same level</li>
+            </div>
+        </div>
+        <button class="continue-btn" onclick="startGame()">To Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

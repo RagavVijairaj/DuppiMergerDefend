@@ -1,0 +1,176 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.game-card {
+    width: 100vw;
+    height: 100vh;
+    background: #f5ebe0;
+    color: #5e503f;
+}
+
+.game-area {
+    height: 85vh;
+    background: #eae0d5;
+    position: relative;
+    overflow: hidden;
+}
+
+.tower-area {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: #c6ac8f;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    padding: 10px;
+    z-index: 999;
+}
+
+.tower-slot {
+    background: #d5bdaf;
+    border: 2px solid #b08968;
+    border-radius: 8px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #5e503f;
+}
+
+.tower-slot.has-tower {
+    background: #9c6644;
+    border-color: #7f5539;
+    color: white;
+}
+
+.controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #c6ac8f;
+    z-index: 1000;
+}
+
+.controls-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e3d5ca;
+    z-index: 1000;
+}
+
+.button {
+    background: #9c6644;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1001;
+    flex: 1;
+    max-width: 200px;
+    margin: 0 10px;
+}
+
+.button:hover {
+    background: #7f5539;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #5e503f;
+}
+
+.home-screen {
+    position: fixed;
+    inset: 0;
+    background: #f5ebe0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    gap: 20px;
+    padding: 20px;
+}
+
+.tutorial {
+    max-width: 600px;
+    background: #e3d5ca;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.tutorial h1 {
+    color: #5e503f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tutorial-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.tutorial-list li {
+    color: #5e503f;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.continue-btn {
+    background: #9c6644;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.continue-btn:hover {
+    background: #7f5539;
+    transform: translateY(-2px);
+}
+
+#player {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #9c6644;
+    border-radius: 6px;
+    transform: translateX(-50%);
+    z-index: 100;
+}
